@@ -21,9 +21,19 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Info", "Index", "Home")</li>
+                    
+                    @if (User.IsInRole("Tovholder"))
+                    {
+                        <li>@Html.ActionLink("Frivillige", "About", "Home")</li>
+                        <li>@Html.ActionLink("Nye frivillige", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Dataudtræk", "Contact", "Home")</li>
+                    }
+                    @if (User.IsInRole("Frivillig"))
+                    {
+                        <li>@Html.ActionLink("Timeregistrering", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Efterregistrering", "Contact", "Home")</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
