@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-MySQLMVC-20170307035903.mdf;Initial Catalog=aspnet-MySQLMVC-20170307035903;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ThomasB\\Source\\Repos\\MySQLMVC\\MySQLMVC\\MySQLMVC\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="sakilaEntities-Web.config Connection String" description="sakilaEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=localhost;user id=root;password=enejwak5042;database=sakila&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ThomasB\\Source\\Repos\\MySQLMVC\\MySQLMVC\\MySQLMVC\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='sakilaEntities']/@connectionString" />
+  </parameter>
+</parameters>
