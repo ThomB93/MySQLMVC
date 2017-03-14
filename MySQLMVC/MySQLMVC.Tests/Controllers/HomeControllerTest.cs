@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MySQLMVC;
 using MySQLMVC.Controllers;
+using Moq;
+using NUnit.Framework;
 
 namespace MySQLMVC.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
+        [Test]
+        public void Get_Data_From_MySQL_Database()
+        {
+            
+        }
+        [Test]
         public void Index()
         {
             // Arrange
@@ -25,7 +32,7 @@ namespace MySQLMVC.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void About()
         {
             // Arrange
@@ -38,7 +45,7 @@ namespace MySQLMVC.Tests.Controllers
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void Contact()
         {
             // Arrange
